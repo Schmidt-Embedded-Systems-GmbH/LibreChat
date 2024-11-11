@@ -192,7 +192,6 @@ endpoints:
       models:
         default: [
           'llama3.1:latest',
-          'llama3.1:70b',
           'llama3.2:1b',
           'llama3.2:3b',
           'codellama:7b',
@@ -205,10 +204,28 @@ endpoints:
         fetch: false    # fetch the list of available models from the endpoint
       titleConvo: true
       titleModel: "current_model"
+      titleMessageRole: "user"
       summarize: false
       summaryModel: "current_model"
       forcePrompt: false
       modelDisplayLabel: "Ollama"
+
+    - name: 'Smart File System (local)'
+      apiKey: 'ollama'
+      baseURL: 'http://192.168.1.143:8000/v1'
+      iconURL: 'https://schmidt-embedded-systems.de/img/favicon.png'
+      models:
+        default: [
+          'llama3.1:latest',
+          ]
+        fetch: true    # fetch the list of available models from the endpoint
+      titleConvo: true
+      titleModel: "llama3.1:latest"
+      titleMessageRole: "user"
+      summarize: false
+      summaryModel: "current_model"
+      forcePrompt: false
+      modelDisplayLabel: "Smart File System"
 
       
     
